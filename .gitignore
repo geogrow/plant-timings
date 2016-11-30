@@ -11,3 +11,5 @@
 /public/assets
 /tags
 /tmp/*
+.tags
+.tags_sorted_by_file
