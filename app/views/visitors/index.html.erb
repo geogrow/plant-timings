@@ -1,0 +1,97 @@
+<% content_for :title do %>All The Plants<% end %>
+  <body>  
+   <div style="float:left; display:inline-block;">
+      <div id="map2" style="width:500px;height:300px"></div>
+    </div>
+
+    <div style="float:left; margin-left:10px; display:inline-block;">
+      Global GeoGrow
+      <label>Founded by: Someone</label>
+      <label>Location: 53.393, -2.187</label> 
+      <label>Habitat: <b>Industrial Estate</b></label>
+      <label>Number of Edible Species: 1</label> 
+      <label>Next harvest due: <b>2016 June</b></label> 
+      <label>Last observation: Gather35 found <b>ripening</b> Mugwort in <b>2016 May</b></label> 
+      <label>Last interaction:  Gather35 <b>harvested</b> Mugwort in <b>2015 June</b></label>
+      
+      <div style="float:left; display:inline-block;">
+        <a href="#">Add a new Observation</a> |
+        <a href="#">Add a new Interaction</a><br/>
+        <a href="#">View Timeline</a> |
+        <a href="#">Rate Suitability</a><br/>
+      </div>
+    </div>
+    <br/>
+  </body>
+</html>
+
+<script>
+  function initMap() {
+    var map, map2, map3;
+
+    var mapOptions = {
+      center: new google.maps.LatLng(53.393,-2.187),
+      zoom: 13,
+      mapTypeId: google.maps.MapTypeId.HYBRID
+    };
+
+    //map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    map2 = new google.maps.Map(document.getElementById("map2"), mapOptions);
+    //map3 = new google.maps.Map(document.getElementById("map3"), mapOptions);
+
+    //var marker = new google.maps.Marker({ map: map, position: { lat: 53.393, lng: -2.187} });
+    var marker2 = new google.maps.Marker({ map: map2, position: { lat: 53.393, lng: -2.187 } });
+    var marker2b = new google.maps.Marker({ map: map2, position: { lat: 53.3935, lng: -2.1781 } });
+    //var marker3 = new google.maps.Marker({ map: map3, position: { lat: 57.245, lng: -2.311 } });
+    //var marker3b = new google.maps.Marker({ map: map3, position: { lat: 57.245, lng: -2.290 } });
+
+    var area_1 = new google.maps.Rectangle({
+      strokeColor: '#FF0000',
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: '#FF0000',
+      fillOpacity: 0.35,
+      map: map,
+      bounds: {
+        north: 53.394,
+        south: 53.392,
+        east: -2.185,
+        west: -2.189
+      }
+    });
+
+    var area_2 = new google.maps.Rectangle({
+      strokeColor: '#FF0000',
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: '#FF0000',
+      fillOpacity: 0.35,
+      map: map3,
+      bounds: {
+        north: 53.395,
+        south: 53.393,
+        east: -2.176,
+        west: -2.181
+      }
+    });
+
+    var area_1_3 = new google.maps.Rectangle({
+      strokeColor: '#FF0000',
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: '#FF0000',
+      fillOpacity: 0.35,
+      map: map3,
+      bounds: {
+        north: 53.394,
+        south: 53.392,
+        east: -2.185,
+        west: -2.189
+      }
+    });
+  }
+
+  $(document).ready(function(){
+    initMap();
+  })
+</script>

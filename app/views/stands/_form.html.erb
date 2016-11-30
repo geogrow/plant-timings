@@ -1,0 +1,34 @@
+<%= form_for(@stand) do |f| %>
+  <% if @stand.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@stand.errors.count, "error") %> prohibited this stand from being saved:</h2>
+
+      <ul>
+      <% @stand.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :max_lat, "Max Lat (north)" %><br>
+    <%= f.number_field :max_lat, step: :any %>
+  </div>
+  <div class="field">
+    <%= f.label :min_lat, "Min Lat (south)" %><br>
+    <%= f.number_field :min_lat, step: :any %>
+  </div>
+  <div class="field">
+    <%= f.label :max_long, "Max Long (west)" %><br>
+    <%= f.number_field :max_long, step: :any %>
+  </div>
+  <div class="field">
+    <%= f.label :min_long, "Min Long (east)"%><br>
+    <%= f.number_field :min_long, step: :any %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

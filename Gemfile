@@ -21,6 +21,8 @@ gem "sprockets-es6"
 gem "suspenders"
 gem "title"
 gem "uglifier"
+gem 'react-rails'
+gem 'coffee-rails'
 
 group :development do
   gem "listen"
