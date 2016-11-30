@@ -2,16 +2,15 @@ source "https://rubygems.org"
 
 ruby "2.3.1"
 
+gem "rails", "~> 5.0.0.1"
 gem "autoprefixer-rails"
 gem "delayed_job_active_record"
 gem "flutie"
 gem "honeybadger"
-gem "jquery-rails"
 gem "normalize-rails", "~> 3.0.0"
 gem "pg"
 gem "puma"
 gem "rack-canonical-host"
-gem "rails", "~> 5.0.0"
 gem "recipient_interceptor"
 gem "sass-rails", "~> 5.0"
 gem "simple_form"
@@ -21,7 +20,7 @@ gem "sprockets-es6"
 gem "suspenders"
 gem "title"
 gem "uglifier"
-gem 'react-rails'
+gem "react_on_rails", "~> 6"
 gem 'coffee-rails'
 
 group :development do
