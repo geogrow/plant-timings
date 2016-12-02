@@ -3,6 +3,7 @@ source "https://rubygems.org"
 ruby "2.3.1"
 
 gem "rails", "~> 5.0.0.1"
+gem "react_on_rails", "~> 6"
 gem "autoprefixer-rails"
 gem "delayed_job_active_record"
 gem "flutie"
@@ -20,7 +21,6 @@ gem "sprockets-es6"
 gem "suspenders"
 gem "title"
 gem "uglifier"
-gem "react_on_rails", "~> 6"
 gem 'coffee-rails'
 
 group :development do

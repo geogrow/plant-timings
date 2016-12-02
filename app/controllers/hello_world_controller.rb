@@ -1,4 +1,7 @@
-class Stand < ActiveRecord::Base
+class HelloWorldController < ApplicationController
+  def index
+    @hello_world_props = coords.to_json
+  end
 
   def coords
     stands.select('min_long', 'max_long', 'min_lat', 'max_lat')
@@ -7,4 +10,5 @@ class Stand < ActiveRecord::Base
   def stands
     @stands = Stand.all
   end
+
 end

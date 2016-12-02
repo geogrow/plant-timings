@@ -4,7 +4,8 @@ class StandsController < ApplicationController
   # GET /stands
   # GET /stands.json
   def index
-    @stands = Stand.all
+    @stands_props = stands
+    @stands_coords = coords.as_json
   end
 
   # GET /stands/1
@@ -21,6 +22,10 @@ class StandsController < ApplicationController
 
   def plant_response
     Plant.new().get
+  end
+
+  def coords
+    stands.select('min_long', 'max_long', 'min_lat', 'max_lat')
   end
 
   # GET /stands/1/edit
@@ -77,6 +82,11 @@ class StandsController < ApplicationController
     def plants
       @plant ||= plant_response.as_json
     end
+
+    def stands
+      @stands = Stand.all
+    end
+
   
     # Use callbacks to share common setup or constraints between actions.
     def set_stand

@@ -13,3 +13,9 @@
 /tmp/*
 .tags
 .tags_sorted_by_file
+# React on Rails
+npm-debug.log*
+node_modules
+
+# Generated js bundles
+/app/assets/webpack/*
