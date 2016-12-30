@@ -1,8 +1,8 @@
 import React, { PropTypes as T } from 'react'
 import ReactDOM from 'react-dom'
 
-import cache from 'utils/cache'
-import GoogleApi from 'utils/GoogleApi'
+import ScriptCache from './lib/ScriptCache'
+import GoogleApi from './lib/GoogleApi'
 
 const defaultMapConfig = {}
 export const wrapper = (options) => (WrappedComponent) => {

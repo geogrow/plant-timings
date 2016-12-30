@@ -1,7 +1,5 @@
 import React, { PropTypes } from 'react';
-import GoogleApi from '../../Maps/GoogleApi';
-import GoogleApiComponent from '../../Maps/GoogleApiComponent';
-import ScriptCache from '../../Maps/ScriptCache';
+import Stands from '../components/Stands';
 
 // Simple example of a React "smart" component
 export default class StandsContainer extends React.Component {
