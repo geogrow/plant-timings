@@ -11,7 +11,6 @@ class StandsController < ApplicationController
   # GET /stands/1
   # GET /stands/1.json
   def show
-    
   end
 
   # GET /stands/new
