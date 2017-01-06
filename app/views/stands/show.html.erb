@@ -1,13 +1,10 @@
-<%= react_component('Stand', max_long: @stand.max_long, min_long: @stand.min_long, min_lat: @stand.min_lat, max_lat: @stand.max_lat) %>
+
 
 <%= link_to 'Edit', edit_stand_path(@stand) %> |
 <%= link_to 'Back', stands_path %>
 
 <div>
 <% content_for :title do %><%= @stand.id %><% end %>
-  <script type="text/javascript"
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDw25Rma6yRtHUCxur9KyaG6peisvMQapo&sensor=false">
-  </script>
 
   <script>
     function initMap() {
@@ -42,12 +39,12 @@
       });
     }
 
-    $(document).ready(function(){
+    document.addEventListener("DOMContentLoaded", function() {
       initMap();
-    })
+    });
   </script>
 
-   <div style="float:left; display:inline-block;">
+    <div style="float:left; display:inline-block;">
       <div id="map"></div>
     </div>
 

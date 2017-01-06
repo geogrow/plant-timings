@@ -1,9 +1,8 @@
 <%= react_component('StandsApp', stands: @stands) %>
  
-   <div style="float:left; display:inline-block;">
-      <div id="OverviewMap" style="width:500px;height:300px"></div>
-    </div>
-
+<div style="float:left; display:inline-block;">
+  <div id="OverviewMap" style="width:500px;height:300px">Map will go here</div>
+</div>
 
 
 
@@ -15,10 +14,10 @@
 <table class="table table-striped">
   <thead class="thead-inverse">
     <tr>
-      <th>Latitude</th>
-      <th>Longitude</th>
-      <th>Square m</th>
-      <th>Bounds</th>
+      <th>max_long</th>
+      <th>min_long</th>
+      <th>max_lat</th>
+      <th>min_lat</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -29,7 +28,7 @@
         <td><%= stand.max_long %></td>
         <td><%= stand.min_long %></td>
         <td><%= stand.max_lat %></td>
-        <td><%= stand.min_long %></td>
+        <td><%= stand.min_lat %></td>
         <td><%= link_to 'Show', stand %></td>
         <td><%= link_to 'Edit', edit_stand_path(stand) %></td>
         <td><%= link_to 'Destroy', stand, method: :delete, data: { confirm: 'Are you sure?' } %></td>
