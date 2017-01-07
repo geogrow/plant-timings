@@ -21,10 +21,10 @@ export default class StandsContainer extends Component {
        map.setCenter(center);
     });
 
-    _.each(this.props.markers, function(marker) {
+    _.each(this.props.areas, function(area) {
         var bounds = new google.maps.LatLngBounds(
-            new google.maps.LatLng(marker.max_lat, marker.max_long),
-            new google.maps.LatLng(marker.min_lat, marker.min_long)
+            new google.maps.LatLng(area.max_lat, area.max_long),
+            new google.maps.LatLng(area.min_lat, area.min_long)
          );
       showRect(map,bounds);
     });
