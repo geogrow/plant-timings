@@ -46,7 +46,6 @@ export default class StandsContainer extends Component {
   render() {
     return(
       <div className="map-box">
-        <h3>Map</h3>
         <div ref="map" style={{width:'100%', height: 500, border: '1px solid black'}}>
           I am map.
         </div>
