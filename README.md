@@ -1,4 +1,5 @@
 # Plant-timings
+![image](https://media.giphy.com/media/3o7TKIyZgIr2SMOyEo/source.gif)
 
 ## Getting Started
 
