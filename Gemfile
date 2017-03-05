@@ -3,6 +3,7 @@ source "https://rubygems.org"
 ruby "2.3.1"
 
 gem "rails", "~> 5.0.0.1"
+gem "react-rails"
 gem "react_on_rails", "~> 6"
 gem "autoprefixer-rails"
 gem "delayed_job_active_record"
@@ -31,6 +32,7 @@ group :development do
 end
 
 group :development, :test do
+  gem "simplecov", require: false
   gem "awesome_print"
   gem "bullet"
   gem "bundler-audit", ">= 0.5.0", require: false
@@ -51,7 +53,6 @@ group :test do
   gem "formulaic"
   gem "launchy"
   gem "shoulda-matchers"
-  gem "simplecov", require: false
   gem "timecop"
   gem "webmock"
 end

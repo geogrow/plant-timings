@@ -186,6 +186,13 @@ GEM
     rb-fsevent (0.9.8)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
+    react-rails (1.9.0)
+      babel-transpiler (>= 0.7.0)
+      coffee-script-source (~> 1.8)
+      connection_pool
+      execjs
+      railties (>= 3.2)
+      tilt
     react_on_rails (6.2.1)
       addressable
       connection_pool
@@ -310,6 +317,7 @@ DEPENDENCIES
   rack-timeout
   rails (~> 5.0.0.1)
   rails_stdout_logging
+  react-rails
   react_on_rails (~> 6)
   recipient_interceptor
   refills
