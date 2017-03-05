@@ -1,0 +1,59 @@
+
+
+<%= link_to 'Edit', edit_stand_path(@stand) %> |
+<%= link_to 'Back', stands_path %>
+
+<div>
+<% content_for :title do %><%= @stand.id %><% end %>
+
+  <script>
+    function initMap() {
+      var map;
+
+      var mapOptions = {
+        center: new google.maps.LatLng(<%= @stand.max_lat %>, <%= @stand.max_long %>),
+        zoom: 13,
+        mapTypeId: google.maps.MapTypeId.HYBRID
+      };
+
+      map = new google.maps.Map(document.getElementById("map"), mapOptions);
+      google.maps.event.addDomListener(window, "resize", function() {
+         var center = map.getCenter();
+         google.maps.event.trigger(map, "resize");
+         map.setCenter(center);
+      });
+
+      var area_1 = new google.maps.Rectangle({
+        strokeColor: '#FF0000',
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: '#FF0000',
+        fillOpacity: 0.35,
+        map: map,
+        bounds: {
+          north: <%= @stand.max_lat %>,
+          south: <%= @stand.min_lat %>,
+          west: <%= @stand.max_long %>,
+          east: <%= @stand.min_long %>
+        }
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      initMap();
+    });
+  </script>
+
+    <div style="float:left; display:inline-block;">
+      <div id="map"></div>
+    </div>
+
+    <div style="float:left; margin-left:10px; display:inline-block;">
+
+      <div style="float:left; display:inline-block;">
+        <a href="#">View Timeline</a>
+      </div>
+    </div>
+
+    <br/>
+</div>

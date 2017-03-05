@@ -1,0 +1,19 @@
+<h1><%= @plant.common_name %></h1>
+
+<p>
+  <strong>Latin name:</strong>
+  <%= @plant.latin_name %>
+</p>
+
+<p>
+  <strong>Common name:</strong>
+  <%= @plant.common_name %>
+</p>
+
+<p>
+  <strong>Habitat:</strong>
+  <%= @plant.habitat %>
+</p>
+
+<%= link_to 'Edit', edit_plant_path(@plant) %> |
+<%= link_to 'Back', plants_path %>

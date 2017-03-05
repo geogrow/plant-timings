@@ -1,0 +1,25 @@
+// Place all the styles related to the Stands controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+html {
+  height: 100%
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0
+}
+
+#map {
+  display:block;
+  float:left;
+  height: 300px;
+  left: 0;
+  width:500px;
+}
+
+#map2 { height: 100%; float:left; display:block; margin-left: 10px;  }
+#map3 { height: 100%; float:left; display:block; margin-top: 10px;  }

@@ -3,20 +3,25 @@
 <head>
   <meta charset="utf-8" />
   <meta name="ROBOTS" content="NOODP" />
+  <title><%= content_for?(:title) ? yield(:title) : "PT" %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <%#
-    Configure default and controller-, and view-specific titles in
-    config/locales/en.yml. For more see:
-    https://github.com/calebthompson/title#usage
-  %>
-  <title><%= title %></title>
+  <%= javascript_include_tag 'application' %>
   <%= stylesheet_link_tag :application, media: "all" %>
   <%= csrf_meta_tags %>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDw25Rma6yRtHUCxur9KyaG6peisvMQapo&sensor=false">
+  </script>
+
+
 </head>
 <body class="<%= body_class %>">
-  <%= render "flashes" -%>
-  <%= yield %>
-  <%= render "javascript" %>
-  <%= render "css_overrides" %>
+  <header class="navbar nav-tabs navbar-inverse">
+    <%= render 'layouts/navigation' %>
+  </header>
+  <main role="main">
+      <%= render "flashes" -%>
+    <%= yield %>
+      <%= render "javascript" %>
+  </main>
 </body>
 </html>

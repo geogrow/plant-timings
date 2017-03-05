@@ -1,0 +1,35 @@
+<%= react_component('StandsApp', props: { areas: @stands_coords }) %>
+ 
+<% content_for :title do %>Stands<% end %>
+
+<h1>Listing Stands</h1>
+
+<table class="table table-striped">
+  <thead class="thead-inverse">
+    <tr>
+      <th>max_long</th>
+      <th>min_long</th>
+      <th>max_lat</th>
+      <th>min_lat</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stands.each do |stand| %>
+      <tr>
+        <td><%= stand.max_long %></td>
+        <td><%= stand.min_long %></td>
+        <td><%= stand.max_lat %></td>
+        <td><%= stand.min_lat %></td>
+        <td><%= link_to 'Show', stand %></td>
+        <td><%= link_to 'Edit', edit_stand_path(stand) %></td>
+        <td><%= link_to 'Destroy', stand, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Stand', new_stand_path %>
